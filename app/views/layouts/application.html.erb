@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
 
 $('#mybutton').click(function() { 
 
-$.getJSON('//www.googleapis.com/language/translate/v2?key=AIzaSyBBlrkzNy0Lj71D30a6ptm7-WobHEss5sE&source=en&target=zh&q=Hello world&jsoncallback=?', function(json){
+$.getJSON('http://openapi.baidu.com/public/2.0/bmt/translate?client_id=iEPUSFHqPtNGET1IbwrdM6cF&q=today&from=auto&to=auto&jsoncallback=?', function(json){
 
 
 
@@ -35,7 +35,7 @@ $('#outputvalue').html(s);
 
 });
 
-$.post('//www.googleapis.com/language/translate/v2?key=AIzaSyBBlrkzNy0Lj71D30a6ptm7-WobHEss5sE&source=en&target=zh&q=Hello world&jsoncallback=?', {}, function(json){
+$.post('http://openapi.baidu.com/public/2.0/bmt/translate?client_id=iEPUSFHqPtNGET1IbwrdM6cF&q=today&from=auto&to=auto&jsoncallback=?', {}, function(json){
 
 
 var s = ''
