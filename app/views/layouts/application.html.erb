@@ -6,6 +6,51 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script type=”text/javascript“>
+
+ $(function(){
+
+$(‘#inputvalue’).valueChange(function(){
+
+$.getJSON(“http://openapi.baidu.com/public/2.0/bmt/translate?client_id=iEPUSFHqPtNGET1IbwrdM6cF&q=today%0Atomorrow&from=auto&to=auto”, function(json){
+
+//alert(“JSON Data: ” + trans_result.dst);
+
+var s = “”
+
+ $(json).each(function(i){
+
+s += json[i].trans_result.dst;
+
+});
+
+$(“#outputvalue”).html(s);
+
+ //对json对象数组的处理方式
+
+});
+
+$.post(“http://openapi.baidu.com/public/2.0/bmt/translate?client_id=iEPUSFHqPtNGET1IbwrdM6cF&q=today%0Atomorrow&from=auto&to=auto”, {}, function(json){
+
+var s = “”
+
+$(json).each(function(i){
+
+s += json[i].json[i].trans_result.dst;
+
+});
+
+$(“#outputvalue”).html(s);
+
+ //对带有中文的需用post方式提交返回数据，避免url编码
+
+}, “json”)
+
+});
+
+});
+
+</script>
 </head>
 <body>
 
