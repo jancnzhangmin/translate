@@ -1656,6 +1656,11 @@
             fluid: false              //  Support responsive design. May break non-responsive designs
         });
     });
+    
+    
+    $(function(){
+      $("#mybutton").click({alert("sdfsdf");});
+    });
 
 
 
