@@ -16,7 +16,7 @@ $.getJSON(“http://openapi.baidu.com/public/2.0/bmt/translate?client_id=iEPUSFH
 
 //alert(“JSON Data: ” + trans_result.dst);
 
-var s = “”
+var s = “1”
 
  $(json).each(function(i){
 
@@ -24,7 +24,7 @@ s += json[i].trans_result.dst;
 
 });
 
-$(“#outputvalue”).html(s);
+$(“#outputvalue”).value=s;
 
  //对json对象数组的处理方式
 
@@ -32,7 +32,7 @@ $(“#outputvalue”).html(s);
 
 $.post(“http://openapi.baidu.com/public/2.0/bmt/translate?client_id=iEPUSFHqPtNGET1IbwrdM6cF&q=today%0Atomorrow&from=auto&to=auto”, {}, function(json){
 
-var s = “”
+var s = “1”
 
 $(json).each(function(i){
 
@@ -40,7 +40,7 @@ s += json[i].json[i].trans_result.dst;
 
 });
 
-$(“#outputvalue”).html(s);
+$(“#outputvalue”).value=s;
 
  //对带有中文的需用post方式提交返回数据，避免url编码
 
