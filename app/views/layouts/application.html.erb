@@ -15,9 +15,9 @@ jQuery(document).ready(function($) {
 
 
 
-$('#inputvalue').change(function() { 
+$('#mybutton').click(function() { 
 
-$.getJSON('http://openapi.baidu.com/public/2.0/bmt/translate?client_id=iEPUSFHqPtNGET1IbwrdM6cF&q=today&from=auto&to=auto&jsoncallback=?', function(json){
+$.getJSON('//www.googleapis.com/language/translate/v2?key=AIzaSyBBlrkzNy0Lj71D30a6ptm7-WobHEss5sE&source=en&target=zh&q=Hello world&jsoncallback=?', function(json){
 
 
 
