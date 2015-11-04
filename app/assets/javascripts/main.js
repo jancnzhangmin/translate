@@ -1659,7 +1659,10 @@
     
     
     $(function(){
-      $("#mybutton").click({alert("sdfsdf");});
+      $("#mybutton").click({
+        alert:"assadf"
+        
+      });
     });
 
 
