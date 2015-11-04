@@ -17,13 +17,13 @@ jQuery(document).ready(function($) {
 
 $('#mybutton').click(function() { 
 
-$.getJSON('http://openapi.baidu.com/public/2.0/bmt/translate?client_id=iEPUSFHqPtNGET1IbwrdM6cF&q=today&from=auto&to=auto&jsoncallback=?', function(json){
+$.getJSON('http://openapi.baidu.com/public/2.0/bmt/translate?client_id=iEPUSFHqPtNGET1IbwrdM6cF&q=today&from=auto&to=auto&jsoncallback=?', function('('+json+')'){
 
-alert('JSON Data: ');
+
 
 var s = ''
 
- $('('+json+')').each(function(i){
+ $(json).each(function(i){
 
 s += json[i].dst ;
 
@@ -37,7 +37,7 @@ s += json[i].dst ;
 
 $.post('http://openapi.baidu.com/public/2.0/bmt/translate?client_id=iEPUSFHqPtNGET1IbwrdM6cF&q=today&from=auto&to=auto&jsoncallback=?', {}, function(json){
 
-alert('JSON Data: ' + dst);
+
 var s = ''
 
 $(json).each(function(i){
