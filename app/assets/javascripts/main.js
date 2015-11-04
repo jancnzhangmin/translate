@@ -139,37 +139,7 @@
     # =============================================================================
     */
 
-    var $alpha, $container, $container2, addEvent, buildMorris, checkin, checkout, d, date, handleDropdown, initDrag, m, now, nowTemp, timelineAnimate, y;
-    $("#barcharts").sparkline([190, 220, 210, 220, 220, 260, 300, 220, 240, 240, 220, 200, 240, 260, 210], {
-      type: "bar",
-      height: "100",
-      barSpacing: 4,
-      barWidth: 13,
-      barColor: "#cbcbcb",
-      highlightColor: "#89D1E6"
-    });
-    $("#pie-chart").sparkline([2, 8, 6, 10], {
-      type: "pie",
-      height: "220",
-      width: "220",
-      offset: "+90",
-      sliceColors: ["#a0eeed", "#81e970", "#f5af50", "#f46f50"]
-    });
-    $(".sparkslim").sparkline('html', {
-      type: "line",
-      width: "100",
-      height: "30",
-      lineColor: "#adadad",
-      fillColor: "rgba(244, 252, 225, 0.0)",
-      lineWidth: 2,
-      spotColor: "#909090",
-      minSpotColor: "#909090",
-      maxSpotColor: "#909090",
-      highlightSpotColor: "#666",
-      highlightLineColor: "#666",
-      spotRadius: 0,
-      chartRangeMin: 0
-    });
+
     /*
     # =============================================================================
     #   Easy Pie Chart
