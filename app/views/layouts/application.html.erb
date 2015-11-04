@@ -24,7 +24,7 @@ s += json[i].trans_result.dst;
 
 });
 
-$(“#outputvalue”).value=s;
+$(“#outputvalue”).val(s);
 
  //对json对象数组的处理方式
 
@@ -40,7 +40,7 @@ s += json[i].json[i].trans_result.dst;
 
 });
 
-$(“#outputvalue”).value=s;
+$(“#outputvalue”).val(s);
 
  //对带有中文的需用post方式提交返回数据，避免url编码
 
