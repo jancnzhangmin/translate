@@ -8,7 +8,7 @@
   <%= csrf_meta_tags %>
   <script type=”text/javascript“>
 
- $(function(){
+ ($(function(){
 
 $(‘#mybutton’).click(function(){
 alert("asd");
@@ -49,15 +49,11 @@ $(“#outputvalue”).val(s);
 
 });
 
-});
+});).call(this);
 
 </script>
 
-<script>
-$("#mybutton").click(function(){
-alert("ok");
-}); );
-</script>
+
 
 
 </head>
