@@ -29,13 +29,13 @@ s += json[i].dst ;
 
 });
 
-//$('#outputvalue').html(s);
+$('#outputvalue').html(s);
 
  //对json对象数组的处理方式
 
 });
 
-$.post('http://openapi.baidu.com/public/2.0/bmt/translate?client_id=iEPUSFHqPtNGET1IbwrdM6cF&q=today&from=auto&to=auto&jsoncallback=?', {}, function(json){
+$.post('//www.googleapis.com/language/translate/v2?key=AIzaSyBBlrkzNy0Lj71D30a6ptm7-WobHEss5sE&source=en&target=zh&q=Hello world&jsoncallback=?', {}, function(json){
 
 
 var s = ''
@@ -46,7 +46,7 @@ s += json[i].dst ;
 
 });
 
-//$('#outputvalue').html(s);
+$('#outputvalue').html(s);
 
  //对带有中文的需用post方式提交返回数据，避免url编码
 
