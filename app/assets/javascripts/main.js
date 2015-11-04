@@ -1630,7 +1630,7 @@
     
     $(function(){
       $("#mybutton").click({
-        alert:"assadf"
+        alert("sdfas")
         
       });
     });
