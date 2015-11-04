@@ -10,13 +10,58 @@
 
 <script>
 jQuery(document).ready(function($) {
+
+
+
+
+
 $('#mybutton').click(function() { 
-$.getJSON("http://openapi.baidu.com/public/2.0/bmt/translate?client_id=iEPUSFHqPtNGET1IbwrdM6cF&q=today&from=auto&to=auto",function(json){
-var s=""
+
+$.getJSON(“http://openapi.baidu.com/public/2.0/bmt/translate?client_id=iEPUSFHqPtNGET1IbwrdM6cF&q=today&from=auto&to=auto”, function(json){
+
+//alert(“JSON Data: ” + dst);
+
+var s = “”
+
+ $(json).each(function(i){
+
+s += json[i].dst + “—-”;
+
+});
+
+$(“#outputvalue”).html(s);
+
+ //对json对象数组的处理方式
+
+});
+
+$.post(“http://openapi.baidu.com/public/2.0/bmt/translate?client_id=iEPUSFHqPtNGET1IbwrdM6cF&q=today&from=auto&to=auto”, {}, function(json){
+
+var s = “”
+
 $(json).each(function(i){
-s+=json[i].dst;
-}));
-$("#outputvalue").val(s);
+
+s += json[i].dst + “—-”;
+
+});
+
+$(“#outputvalue”).html(s);
+
+ //对带有中文的需用post方式提交返回数据，避免url编码
+
+}, “json”)
+
+});
+
+
+
+
+
+
+
+
+
+
 });
 });
 </script>
