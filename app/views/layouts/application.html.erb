@@ -8,7 +8,7 @@
   <%= csrf_meta_tags %>
 
 
-<script>
+<script language="javascript" type="text/javascript">
 jQuery(document).ready(function($) {
 
 
@@ -66,6 +66,38 @@ $('#outputvalue').html(s);
 
 
 });
+
+
+
+
+
+function fn(){
+				var input = $("#in").val();
+				var source= $("#source").val();
+				var target= $("#target").val();
+				$.ajax({
+					url : "http://openapi.baidu.com/public/2.0/bmt/translate?client_id=iEPUSFHqPtNGET1IbwrdM6cF&q="+ input +"&from="+source+"&to="+target,
+					async : false,
+					type : "get",
+					dataType : "jsonp",
+					success : function(data){
+						//$("#img").attr("style","display:none");
+						if(data.trans_result != undefined){
+							//$("#msg").html("<b>返回的JSON字符串 =</b> "+JSON.stringify(data));
+							$("#out").val(data.trans_result[0].dst);
+							//$("body").attr("style","color:");
+						}else{
+							//$("#msg").html("<b>返回的JSON字符串 =</b> "+JSON.stringify(data));
+							$("#out").val("");
+							//$("body").attr("style","color:");
+						}
+					}
+				});
+			}
+
+
+
+
 </script>
 
 
