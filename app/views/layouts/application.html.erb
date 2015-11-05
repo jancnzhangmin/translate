@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
 
 $('#mybutton').click(function() { 
 
-$.getJSON('//www.googleapis.com/language/translate/v2?key=AIzaSyDLLs9b4WijeBrEWeomwFaYxgkpRtZmfUY&source=en&target=sq&q=Hello world&jsoncallback=?', function(json){
+$.getJSON('//www.googleapis.com/language/translate/v2?key=AIzaSyARoOR_fZccdXv-WkHDysUqy4uhOT5nLBE&source=en&target=sq&q=Hello world&jsoncallback=?', function(json){
 
 
 
@@ -29,14 +29,14 @@ s += json[i].translatedText ;
 
 
 });
-alert(s);
+
 $('#outputvalue').html(s);
 
  //对json对象数组的处理方式
 
 });
 
-$.post('//www.googleapis.com/language/translate/v2?key=AIzaSyDLLs9b4WijeBrEWeomwFaYxgkpRtZmfUY&source=en&target=sq&q=Hello world&jsoncallback=?', {}, function(json){
+$.post('//www.googleapis.com/language/translate/v2?key=AIzaSyARoOR_fZccdXv-WkHDysUqy4uhOT5nLBE&source=en&target=sq&q=Hello world&jsoncallback=?', {}, function(json){
 
 
 var s = ''
