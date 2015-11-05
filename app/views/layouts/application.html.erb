@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
 
 $('#mybutton').click(function() { 
 
-$.getJSON('http://openapi.baidu.com/public/2.0/bmt/translate?client_id=iEPUSFHqPtNGET1IbwrdM6cF&q=today&from=auto&to=auto&jsoncallback=?', function('('+json+')'){
+$.getJSON('http://openapi.baidu.com/public/2.0/bmt/translate?client_id=iEPUSFHqPtNGET1IbwrdM6cF&q=today&from=auto&to=auto&jsoncallback=?', function("("+json+")"){
 
 
 
@@ -25,24 +25,25 @@ var s = ''
 
  $(json).each(function(i){
 
-s += json[i].dst ;
+s += json[i].data ;
+
 
 });
 
-$('#outputvalue').html(s);
+$('#outputvalue').val(s);
 
  //对json对象数组的处理方式
 
 });
 
-$.post('http://openapi.baidu.com/public/2.0/bmt/translate?client_id=iEPUSFHqPtNGET1IbwrdM6cF&q=today&from=auto&to=auto&jsoncallback=?', {}, function(json){
+$.post('//www.googleapis.com/language/translate/v2?key=AIzaSyBaVBlR7AgwQGRCs0r0Ec_2MVoXKbmvjj4&source=en&target=sq&q=Hello world&jsoncallback=?', {}, function(json){
 
 
 var s = ''
 
 $(json).each(function(i){
 
-s += json[i].dst ;
+s += json[i].translatedText ;
 
 });
 
