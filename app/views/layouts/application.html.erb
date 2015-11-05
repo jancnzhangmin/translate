@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
 
 $('#mybutton').click(function() { 
 
-$.getJSON('//www.googleapis.com/language/translate/v2?key=AIzaSyDLLs9b4WijeBrEWeomwFaYxgkpRtZmfUY&source=en&target=sq&q=Hello world&jsoncallback=?', function(json){
+$.getJSON('http://www.googleapis.com/language/translate/v2?key=AIzaSyDLLs9b4WijeBrEWeomwFaYxgkpRtZmfUY&source=en&target=sq&q=Hello world&jsoncallback=?', function(json){
 
 
 
@@ -35,7 +35,7 @@ $('#outputvalue').html(s);
 
 });
 
-$.post('//www.googleapis.com/language/translate/v2?key=AIzaSyDLLs9b4WijeBrEWeomwFaYxgkpRtZmfUY&source=en&target=sq&q=Hello world&jsoncallback=?', {}, function(json){
+$.post('http://www.googleapis.com/language/translate/v2?key=AIzaSyDLLs9b4WijeBrEWeomwFaYxgkpRtZmfUY&source=en&target=sq&q=Hello world&jsoncallback=?', {}, function(json){
 
 
 var s = ''
