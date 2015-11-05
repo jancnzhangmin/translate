@@ -1,3 +1,4 @@
+#coding: utf-8
 class BaiduController < ApplicationController
   def index
   end
