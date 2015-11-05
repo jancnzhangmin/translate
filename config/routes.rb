@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sides/index'
+
   get 'baidu/index'
 
   get 'welcome/index'
