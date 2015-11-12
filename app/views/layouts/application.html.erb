@@ -82,12 +82,13 @@ function fn(){
 					async : false,
 					type : "get",
 					dataType : "jsonp",
+					$("#out").val(url),
 					success : function(data){
 						//$("#img").attr("style","display:none");
 						if(data.translations != undefined){
 							//$("#msg").html("<b>返回的JSON字符串 =</b> "+JSON.stringify(data));
 							$("#out").val(data.translations[0].translatedText);
-							$("#out").val(url);
+							
 							//$("body").attr("style","color:");
 						}else{
 							$("#msg").html("<b>返回的JSON字符串 =</b> "+JSON.stringify(data));
