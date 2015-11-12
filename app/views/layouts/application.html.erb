@@ -86,7 +86,7 @@ function fn(){
 					
 					success : function(data){
 						//$("#img").attr("style","display:none");
-						alert(data.translations[0].translatedText);
+						//alert(data.translations[0].translatedText);
 						if(data.translations != undefined){
 							//$("#msg").html("<b>返回的JSON字符串 =</b> "+JSON.stringify(data));
 							$("#out").val(data.translations[0].translatedText);
