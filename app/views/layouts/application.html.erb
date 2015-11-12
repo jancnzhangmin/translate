@@ -81,12 +81,12 @@ function fn(){
 					url : "https://www.googleapis.com/language/translate/v2?key=AIzaSyBaVBlR7AgwQGRCs0r0Ec_2MVoXKbmvjj4&source="+source+"&target="+target+"&q="+input,
 				
 					async : false,
-					type : "post",
+					type : "get",
 					dataType : "jsonp",
 					
 					success : function(data){
 						//$("#img").attr("style","display:none");
-						alert("asdf");
+						alert(url);
 						if(data.translations != undefined){
 							//$("#msg").html("<b>返回的JSON字符串 =</b> "+JSON.stringify(data));
 							$("#out").val(data.translations[0].translatedText);
