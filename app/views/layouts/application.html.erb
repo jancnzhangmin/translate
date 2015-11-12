@@ -78,6 +78,41 @@ function fn(){
 				var target= $("#target").val();
 				$.ajax({
 					
+					url : "url : "http://openapi.baidu.com/public/2.0/bmt/translate?client_id=iEPUSFHqPtNGET1IbwrdM6cF&q="+ input +"&from="+source+"&to="+target,
+				
+					async : false,
+					type : "get",
+					dataType : "jsonp",
+					
+					success : function(data){
+						//$("#img").attr("style","display:none");
+						//alert(data.translations[0].translatedText);
+						if(data.trans_result != undefined){
+							//$("#msg").html("<b>返回的JSON字符串 =</b> "+JSON.stringify(data));
+							$("#out").val(data.trans_result[0].dst);
+							
+							//$("body").attr("style","color:");
+						}else{
+							$("#msg").html("<b>返回的JSON字符串 =</b> "+JSON.stringify(data));
+							$("#out").val("");
+							//$("body").attr("style","color:");
+						}
+					}
+				});
+			}
+
+
+
+
+
+
+//function fn(){
+				
+				var input = $("#in").val();
+				var source= $("#source").val();
+				var target= $("#target").val();
+				$.ajax({
+					
 					url : "https://www.googleapis.com/language/translate/v2?key=AIzaSyBaVBlR7AgwQGRCs0r0Ec_2MVoXKbmvjj4&source="+source+"&target="+target+"&q="+input,
 				
 					async : false,
@@ -100,8 +135,6 @@ function fn(){
 					}
 				});
 			}
-
-
 
 
 </script>
