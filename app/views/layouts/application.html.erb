@@ -78,10 +78,10 @@ function fn(){
 				var target= $("#target").val();
 				$.ajax({
 					
-					//url : "https://www.googleapis.com/language/translate/v2?key=AIzaSyBaVBlR7AgwQGRCs0r0Ec_2MVoXKbmvjj4&source="+source+"&target="+target+"&q="+input,
-					url : "https://www.googleapis.com/language/translate/v2?key=AIzaSyBaVBlR7AgwQGRCs0r0Ec_2MVoXKbmvjj4&source=en&target=zh&q=hello",
+					url : "https://www.googleapis.com/language/translate/v2?key=AIzaSyBaVBlR7AgwQGRCs0r0Ec_2MVoXKbmvjj4&source="+source+"&target="+target+"&q="+input,
+				
 					async : false,
-					type : "get",
+					type : "post",
 					dataType : "jsonp",
 					
 					success : function(data){
